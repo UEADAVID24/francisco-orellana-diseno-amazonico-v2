@@ -1,0 +1,38 @@
+UNIDAD EDUCATIVA FRANCISCO DE ORELLANA
+PORTADA AMAZÓNICA — HTML, CSS Y JAVASCRIPT
+
+PARA ABRIR
+1. Descarga este ZIP.
+2. Clic derecho > Extraer todo.
+3. Abre la carpeta francisco_orellana_html.
+4. Haz doble clic en index.html para abrirlo en Chrome.
+5. No separes index.html, styles.css, script.js ni la carpeta assets.
+
+DISEÑO ACTUALIZADO
+- Encabezado institucional con el escudo nuevo.
+- Barra superior con accesos rápidos.
+- Fotografía REAL del patio del colegio como fondo de portada, con color y contraste mejorados.
+- Frase institucional y botones.
+- Bordes decorativos verdes y amarillos.
+- Cinco tarjetas de acceso rápido.
+- Se mantienen las secciones: Nosotros, Oferta Académica, Admisiones, Noticias y Contacto.
+- Diseño adaptable a computadoras y celulares.
+
+ARCHIVOS IMPORTANTES
+- index.html: estructura y contenido.
+- styles.css: colores, tamaños, márgenes y diseño.
+- script.js: menú y formulario demostrativo.
+- assets/escudo-francisco-orellana.png: escudo actualizado.
+- assets/colegio-amazonia.jpg: fotografía del colegio usada en el banner.
+
+ANTES DE PUBLICAR
+Completa y verifica los enlaces reales de Moodle, Secretaría Virtual, Teams, redes sociales, dirección, correo y teléfono. El formulario es demostrativo y requiere conectar un servicio para recibir mensajes.
+
+AJUSTE EXTRA: se aclaró la fotografía del patio y se redujo la capa azul oscura para que se aprecien mejor el cielo, las plantas y los edificios.
+
+
+NUEVO AJUSTE DE DISEÑO
+- Encabezado institucional más grande y menú azul redondeado.
+- Portada más luminosa, con texto más destacado y ondas verdes/amarillas.
+- Tarjetas de acceso rápido más visibles y con sombras suaves.
+- Colores institucionales reforzados y ajustes para pantallas pequeñas.
