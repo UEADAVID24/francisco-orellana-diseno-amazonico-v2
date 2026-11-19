@@ -1,0 +1,5 @@
+1. Copia index.html y reemplaza tu index.html actual.
+2. Copia la carpeta assets/eventos dentro de tu carpeta assets actual.
+3. NO reemplaces ni borres tu styles.css, script.js, escudo ni imagen de portada.
+4. El HTML conserva el diseño actual y agrega organigrama, eventos, mapa y teléfono.
+5. Edumax queda pendiente hasta que tengas el enlace oficial.

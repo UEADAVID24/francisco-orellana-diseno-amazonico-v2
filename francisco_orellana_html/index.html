@@ -7,6 +7,74 @@
   <meta name="theme-color" content="#092b63">
   <title>Unidad Educativa Francisco de Orellana | Orgullo Amazónico</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Apartados añadidos para cumplir los requisitos, sin rediseñar la página original */
+    html { scroll-padding-top: 115px; }
+    body p, body li { text-align: justify; }
+    .added-access { padding: 28px 0; background: #f5f7fa; border-top: 1px solid #e5eaf1; }
+    .added-access .container { display:flex; flex-wrap:wrap; gap:12px; }
+    .added-access a { display:inline-flex; align-items:center; gap:8px; padding:11px 17px; border-radius:30px; background:#092b63; color:#fff; font-size:12px; font-weight:800; }
+    .added-access a:hover { background:#16834b; }
+    .edumax-note { margin:14px 0 0; color:#657187; font-size:12px; }
+    .org-section { background:#f5f7fa; }
+    .org-chart { max-width:900px; margin:30px auto 0; display:flex; flex-direction:column; align-items:center; }
+    .org-node { min-width:185px; padding:13px 17px; border:2px solid #103b7c; border-radius:8px; background:#fff; color:#08285e; font-size:13px; font-weight:800; text-align:center; box-shadow:0 6px 18px #092b6310; }
+    .org-node.top { background:#08285e; color:#fff; border-color:#f4bd20; }
+    .org-node.staff { background:#16834b; color:#fff; border-color:#16834b; }
+    .org-line { width:2px; height:24px; background:#9aabc0; }
+    .org-branches { width:min(100%,570px); display:flex; justify-content:center; gap:24px; flex-wrap:wrap; }
+    .org-note { max-width:760px; margin:22px auto 0; color:#657187; font-size:12px; text-align:center !important; }
+
+
+    /* Antecedentes y reseña histórica */
+    .history-section { background:#f5f8fc; }
+    .history-content { max-width:950px; margin:28px auto 0; }
+    .history-content > h3, .history-authorities h3 { color:#08285e; font-family:Manrope,sans-serif; font-size:22px; margin:0 0 22px; }
+    .history-timeline { border-left:3px solid #f4bd20; margin-left:9px; padding-left:25px; }
+    .history-entry { position:relative; padding:0 0 25px; }
+    .history-entry:last-child { padding-bottom:8px; }
+    .history-entry:before { content:""; position:absolute; width:13px; height:13px; border-radius:50%; background:#16834b; border:3px solid #fff; box-shadow:0 0 0 2px #16834b; left:-34px; top:3px; }
+    .history-date { color:#16834b; font-size:11px; font-weight:800; letter-spacing:1px; }
+    .history-entry p { color:#536176; font-size:14px; line-height:1.85; margin:8px 0 0; text-align:justify; }
+    .history-authorities { margin-top:30px; padding:25px; background:#fff; border:1px solid #e5eaf0; border-radius:8px; }
+    .history-authority-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+    .history-authority-grid div { display:flex; flex-direction:column; gap:5px; padding:15px; background:#f5f8fc; border-radius:6px; }
+    .history-authority-grid b { color:#08285e; font-size:12px; }
+    .history-authority-grid span { color:#536176; font-size:14px; }
+    .history-note { margin:15px 0 0; color:#7a8798; font-size:11px; text-align:justify; }
+    @media(max-width:600px) { .history-authority-grid { grid-template-columns:1fr; } .history-authorities { padding:18px; } }
+
+    /* Sección Quiénes somos: misión, visión y objetivos institucionales */
+    .identity-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:28px; }
+    .identity-card { overflow:hidden; display:grid; grid-template-columns: minmax(125px, 0.72fr) minmax(0,1.5fr); background:#fff; border:1px solid #e5eaf0; border-radius:8px; box-shadow:0 9px 25px #0c2b5510; }
+    .identity-card img { width:100%; height:100%; min-height:230px; object-fit:cover; }
+    .identity-card-copy { padding:24px; align-self:center; }
+    .identity-number { color:#16834b; font-size:10px; font-weight:800; letter-spacing:1px; }
+    .identity-card-copy h3, .objectives-heading h3 { color:#08285e; font-family:Manrope,sans-serif; font-size:23px; margin:9px 0 12px; }
+    .identity-card-copy p { color:#536176; font-size:14px; line-height:1.8; text-align:justify; margin:0; }
+    .objectives-panel { margin-top:30px; padding:30px 34px; border-left:5px solid #f4bd20; border-radius:7px; background:#f5f8fc; }
+    .objectives-heading h3 { margin-bottom:18px; }
+    .objectives-list { margin:0; padding-left:23px; color:#536176; }
+    .objectives-list li { padding-left:8px; margin:0 0 13px; font-size:14px; line-height:1.8; text-align:justify; }
+    .objectives-list li:last-child { margin-bottom:0; }
+    .about-section p, .about-section li { text-align:justify; }
+    @media(max-width:850px) { .identity-grid { grid-template-columns:1fr; } }
+    @media(max-width:560px) { .identity-card { grid-template-columns:1fr; } .identity-card img { height:190px; min-height:0; } .identity-card-copy { padding:20px; } .objectives-panel { padding:22px 20px; } }
+
+    .events-added { background:#fff; }
+    .events-added-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+    .event-added-card { overflow:hidden; border:1px solid #e5eaf0; border-radius:7px; background:#fff; box-shadow:0 9px 25px #0c2b5510; }
+    .event-added-card img { display:block; width:100%; height:285px; object-fit:cover; }
+    .event-added-copy { padding:20px 22px 23px; }
+    .event-added-copy small { color:#16834b; font-size:10px; font-weight:800; letter-spacing:1px; }
+    .event-added-copy h3 { color:#08285e; font-family:Manrope,sans-serif; font-size:20px; margin:8px 0; }
+    .event-added-copy p { color:#657187; font-size:13px; margin:0; }
+    .added-map { margin-top:28px; background:#fff; border:1px solid #e3e9f0; border-radius:7px; padding:18px; }
+    .added-map h3 { color:#fff; font-family:Manrope,sans-serif; margin:0 0 12px; }
+    .added-map iframe { display:block; width:100%; height:330px; border:0; border-radius:5px; }
+    .contact-detail a { color:inherit; }
+    @media(max-width:720px) { .events-added-grid { grid-template-columns:1fr; } .event-added-card img { height:235px; } .org-node { min-width:145px; } .org-branches { gap:10px; } .added-map iframe { height:260px; } }
+  </style>
 </head>
 <body>
   <div class="utility-bar">
@@ -28,9 +96,12 @@
       <nav class="main-nav" aria-label="Navegación principal">
         <a class="active" href="#inicio">Inicio</a>
         <a href="#nosotros">Nosotros</a>
+        <a href="#antecedentes">Antecedentes</a>
         <a href="#oferta">Oferta Académica</a>
         <a href="#admisiones">Admisiones</a>
         <a href="#noticias">Noticias</a>
+        <a href="#autoridades">Organigrama</a>
+        <a href="#eventos">Eventos</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -61,22 +132,101 @@
         <a class="quick-card" href="#admisiones"><span class="quick-icon">♟</span><span><b>Admisiones</b><small>Matricúlate con nosotros</small></span></a>
         <a class="quick-card" href="#noticias"><span class="quick-icon">▣</span><span><b>Noticias</b><small>Eventos y logros</small></span></a>
         <a class="quick-card" href="#contacto"><span class="quick-icon">✉</span><span><b>Contacto</b><small>Estamos para ti</small></span></a>
+        <a class="quick-card" href="#autoridades"><span class="quick-icon">▥</span><span><b>Organigrama</b><small>Autoridades institucionales</small></span></a>
+        <a class="quick-card" href="#eventos"><span class="quick-icon">▣</span><span><b>Eventos</b><small>Vida estudiantil</small></span></a>
+        <a class="quick-card" href="https://antoniocabri.edu.ec/inicio/index.php" target="_blank" rel="noopener noreferrer"><span class="quick-icon">🎓</span><span><b>Edumax</b><small>Plataforma educativa</small></span></a>
       </div>
     </section>
+
+    <section class="added-access" id="edumax">
+      <div class="container">
+        <a href="https://antoniocabri.edu.ec/inicio/index.php" target="_blank" rel="noopener noreferrer" aria-label="Abrir Edumax en una nueva pestaña">🎓 Acceso a Edumax</a>
+      </div>
+      <div class="container"><p class="edumax-note">Ingresa a Edumax para consultar las opciones de alumnos, profesores, secretaría y otros servicios académicos.</p></div>
+    </section>
+
     <section class="section about-section" id="nosotros">
-      <div class="container two-col">
-        <div>
-          <span class="section-kicker">Nuestra institución</span>
-          <h2>Educación con raíces<br><em>amazónicas</em></h2>
-          <p class="lead">La Unidad Educativa Francisco de Orellana forma parte de la comunidad educativa de Coca, provincia de Orellana.</p>
-          <p>Promovemos una educación integral que reconoce la identidad amazónica, impulsa el pensamiento crítico y prepara a los estudiantes para participar activamente en la sociedad.</p>
-          <a class="text-link" href="#contacto">Conoce más sobre nosotros <span>→</span></a>
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">Nuestra institución</span><h2>Quiénes <em>somos</em></h2></div>
+          <p>Conoce la misión, visión y objetivos institucionales que orientan el trabajo educativo de nuestra comunidad.</p>
         </div>
-        <div class="values-panel">
-          <div class="value-mark">FO</div>
-          <div class="value-item"><span>01</span><div><b>Misión</b><p>Brindar una formación integral, inclusiva y de calidad, centrada en el aprendizaje y los valores.</p></div></div>
-          <div class="value-item"><span>02</span><div><b>Visión</b><p>Ser una institución reconocida por su excelencia, innovación y aporte al desarrollo de la comunidad.</p></div></div>
-          <div class="value-item"><span>03</span><div><b>Identidad</b><p>Valorar la historia, cultura y riqueza natural de la Amazonía ecuatoriana.</p></div></div>
+
+        <div class="identity-grid">
+          <article class="identity-card">
+            <img src="assets/mision.jpg" alt="Imagen institucional relacionada con la misión">
+            <div class="identity-card-copy">
+              <span class="identity-number">01 · PROPÓSITO INSTITUCIONAL</span>
+              <h3>Misión</h3>
+              <p>Formar íntegramente profesionales competentes y emprendedores, capaces de enfrentar los retos existenciales y tecnológicos, con altos valores y principios morales que fortalezcan los lazos interculturales y sociales.</p>
+            </div>
+          </article>
+
+          <article class="identity-card">
+            <img src="assets/vision.jpg" alt="Imagen institucional relacionada con la visión">
+            <div class="identity-card-copy">
+              <span class="identity-number">02 · PROYECCIÓN INSTITUCIONAL</span>
+              <h3>Visión</h3>
+              <p>Ser una institución educativa de gran eficiencia, productividad y calidad que sirva como un pilar fundamental para el desarrollo tecnológico local, provincial y nacional, formando bachilleres competentes con una profunda visión humanista.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="objectives-panel">
+          <div class="objectives-heading">
+            <span class="section-kicker">Nuestro compromiso</span>
+            <h3>Objetivos institucionales</h3>
+          </div>
+          <ol class="objectives-list">
+            <li>Formar a estudiantes de educación básica y bachillerato, capaces de enfrentar los retos del futuro con responsabilidad y disciplina, con una educación integral, humanística, científica, técnica y de calidad, teniendo valores éticos elevados, con sentido crítico; retribuyendo a la sociedad personas cultas, con conocimientos y experiencia, cualidades innatas de un ser social y profesional.</li>
+            <li>Propender a la formación y el desarrollo integral de los estudiantes con cualidades intelectuales, afectivas y morales que sirvan para respetar los derechos humanos de la sociedad.</li>
+            <li>Estimular el espíritu investigativo, la actividad creadora y la responsabilidad en la educación y el trabajo.</li>
+            <li>Desarrollar la capacidad física, intelectual y crítica del estudiante respetando su identidad personal.</li>
+            <li>Fortalecer la disciplina como norma de vida dentro y fuera de la unidad educativa como ejemplo de nobleza y comportamiento social.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section history-section" id="antecedentes">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">Nuestra trayectoria</span><h2>Antecedentes</h2></div>
+          <p>Reseña histórica de los acontecimientos que forman parte del origen y crecimiento de nuestra institución educativa.</p>
+        </div>
+
+        <div class="history-content">
+          <h3>Reseña histórica</h3>
+          <div class="history-timeline">
+            <article class="history-entry">
+              <span class="history-date">13 DE ABRIL DE 1998</span>
+              <p>La Dirección Provincial de Educación y Cultura de Hispana de Napo dona los bienes muebles e inmuebles del Colegio Honorable Consejo Provincial de Napo a la Dirección Provincial de Educación Hispana de Orellana.</p>
+            </article>
+            <article class="history-entry">
+              <span class="history-date">16 DE AGOSTO DE 2006</span>
+              <p>En ese entonces, el Lcdo. Elder Ledesma, Director Provincial de Educación, encarga el rectorado a la Dra. Martha Noboa, quien solicita que se le otorgue el Acuerdo de Creación y Funcionamiento del Colegio Honorable Consejo Provincial de Napo, el cual fue aceptado.</p>
+            </article>
+            <article class="history-entry">
+              <span class="history-date">8 DE SEPTIEMBRE DE 2006</span>
+              <p>El funcionamiento del Colegio Fiscal Mixto Honorable Consejo Provincial de Napo, con Educación Básica y el Bachillerato Técnico en Comercio y Administración, especialidad Administración de Sistemas, ubicado en el barrio Las Américas, en las calles Quito y Auca, sección vespertina, inicia sus actividades al servicio de la comunidad del cantón y la provincia mediante el Acuerdo N.º 050, con aproximadamente 200 estudiantes, una maestra con nombramiento y 12 maestros bonificados del Consejo Provincial y Gobierno Municipal de Orellana.</p>
+            </article>
+            <article class="history-entry">
+              <span class="history-date">AÑO LECTIVO 2015–2016</span>
+              <p>Se unifican las instituciones educativas: escuela de EGB Armada del Ecuador, Enrique Castillo y el colegio particular Jaime Gilber, a la Unidad Educativa Honorable Consejo Provincial de Napo, con aproximadamente 1500 estudiantes, 58 paralelos y 87 docentes.</p>
+            </article>
+          </div>
+
+          <div class="history-authorities">
+            <h3>Autoridades mencionadas en la reseña histórica</h3>
+            <div class="history-authority-grid">
+              <div><b>Rector</b><span>Lic. Francisco Loor</span></div>
+              <div><b>Vicerrectora – sección matutina</b><span>Lic. Maryuri Chimbo</span></div>
+              <div><b>Vicerrectora – sección vespertina</b><span>Ing. Luz Vegay</span></div>
+              <div><b>Inspector general</b><span>Lic. Carlos Jinez</span></div>
+            </div>
+          </div>
+          <p class="history-note">Esta reseña conserva los datos y nombres proporcionados para la página institucional.</p>
         </div>
       </div>
     </section>
@@ -136,14 +286,51 @@
       </div>
     </section>
 
+    <section class="section org-section" id="autoridades">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">Organización institucional</span><h2>Autoridades y <em>organigrama</em></h2></div>
+          <p>La estructura institucional presenta de manera jerárquica las autoridades y los niveles del personal docente.</p>
+        </div>
+        <div class="org-chart" aria-label="Organigrama de la Unidad Educativa Francisco de Orellana">
+          <div class="org-node top">Rector/a</div><div class="org-line"></div>
+          <div class="org-node">Vicerrector/a</div><div class="org-line"></div>
+          <div class="org-branches"><div class="org-node">Inspección General</div><div class="org-node">Secretaría</div></div>
+          <div class="org-line"></div><div class="org-node staff">Personal Docente</div><div class="org-line"></div>
+          <div class="org-branches"><div class="org-node">Inicial</div><div class="org-node">Básica Media</div><div class="org-node">Básica Superior</div><div class="org-node">Bachillerato</div></div>
+        </div>
+        <p class="org-note">Se muestran los cargos solicitados por la licenciada. Los nombres de las autoridades se pueden añadir cuando sean confirmados por la institución.</p>
+      </div>
+    </section>
+
+    <section class="section events-added" id="eventos">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">Nuestra comunidad educativa</span><h2>Eventos y <em>vida estudiantil</em></h2></div>
+          <p>Fotografías de actividades cívicas, académicas y culturales que fortalecen la participación y la identidad de nuestra comunidad educativa.</p>
+        </div>
+        <div class="events-added-grid">
+          <article class="event-added-card"><img src="assets/eventos/juramento-bandera.jpg" alt="Estudiantes formados durante el Juramento a la Bandera"><div class="event-added-copy"><small>ACTO CÍVICO</small><h3>Juramento a la Bandera</h3><p>Los estudiantes participan en este acto solemne con respeto a los símbolos patrios, fortaleciendo los valores ciudadanos, el compromiso y la identidad nacional.</p></div></article>
+          <article class="event-added-card"><img src="assets/eventos/dia-debate.jpg" alt="Comunidad educativa reunida durante el Día de Debate"><div class="event-added-copy"><small>PARTICIPACIÓN ESTUDIANTIL</small><h3>Día de Debate</h3><p>Esta actividad fomenta el pensamiento crítico, la expresión respetuosa de opiniones y el intercambio de ideas entre los integrantes de la comunidad educativa.</p></div></article>
+          <article class="event-added-card"><img src="assets/eventos/interculturalidad.jpg" alt="Estudiantes con vestimenta y expresiones culturales tradicionales"><div class="event-added-copy"><small>CULTURA E IDENTIDAD</small><h3>Interculturalidad</h3><p>La jornada permite valorar las costumbres y expresiones culturales, promoviendo el respeto por la diversidad y el reconocimiento de la riqueza cultural amazónica.</p></div></article>
+          <article class="event-added-card"><img src="assets/eventos/inauguracion.jpg" alt="Comunidad educativa reunida durante la inauguración"><div class="event-added-copy"><small>COMUNIDAD EDUCATIVA</small><h3>Inauguración</h3><p>La inauguración reúne a estudiantes, familias y personal educativo para compartir las actividades institucionales y fortalecer la integración de la comunidad.</p></div></article>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-section" id="contacto">
       <div class="container contact-grid">
         <div><span class="section-kicker light">Estamos para ayudarte</span><h2>Conversemos</h2><p>Para información sobre matrículas, oferta académica o servicios institucionales, comunícate con la institución.</p>
-          <div class="contact-detail"><span>⌖</span><div><b>Ubicación</b><small>Coca, cantón Francisco de Orellana, Ecuador</small></div></div>
+          <div class="contact-detail"><span>⌖</span><div><b>Ubicación</b><small>H223+9P, Francisco de Orellana, El Coca, Ecuador</small></div></div>
+          <div class="contact-detail"><span>☎</span><div><b>Teléfono</b><small><a href="tel:+593985981359">098 598 1359</a></small></div></div>
           <div class="contact-detail"><span>✉</span><div><b>Información general</b><small><a href="mailto:info@uefranciscoorellana.edu.ec">info@uefranciscoorellana.edu.ec</a></small></div></div>
           <div class="contact-detail"><span>✉</span><div><b>Secretaría</b><small><a href="mailto:secretaria@uefranciscoorellana.edu.ec">secretaria@uefranciscoorellana.edu.ec</a></small></div></div>
           <div class="contact-detail"><span>⌂</span><div><b>Dominio institucional principal</b><small>uefranciscodorellana.edu.ec</small></div></div>
           <div class="contact-detail"><span>↗</span><div><b>Dominio secundario</b><small>uefranciscoorellana.com</small></div></div>
+        </div>
+        <div class="added-map">
+          <h3>Ubicación de nuestra institución</h3>
+          <iframe title="Mapa de Google Maps de la Unidad Educativa Francisco de Orellana" src="https://www.google.com/maps?q=H223%2B9P%20Francisco%20de%20Orellana%2C%20Ecuador&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
         <form class="contact-form" id="contactForm">
           <h3>Envíanos un mensaje</h3>
@@ -160,7 +347,7 @@
   <footer class="site-footer">
     <div class="container footer-main">
       <a class="footer-brand" href="#inicio"><img src="assets/escudo-francisco-orellana.png" alt=""><span><b>FRANCISCO DE ORELLANA</b><small>Unidad Educativa</small></span></a>
-      <div class="footer-links"><a href="#nosotros">Nosotros</a><a href="#oferta">Oferta académica</a><a href="#admisiones">Admisiones</a><a href="#contacto">Contacto</a></div>
+      <div class="footer-links"><a href="#nosotros">Nosotros</a><a href="#oferta">Oferta académica</a><a href="#admisiones">Admisiones</a><a href="#autoridades">Organigrama</a><a href="#eventos">Eventos</a><a href="#contacto">Contacto</a></div>
       <div class="social-links" id="redes"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="YouTube">▶</a></div>
     </div>
     <div class="footer-bottom"><div class="container"><span>© <span id="year"></span> Unidad Educativa Francisco de Orellana.</span><span>Todos los derechos reservados.</span></div></div>
